@@ -51,6 +51,18 @@ class LinkedList {
 
     }
 
+    remove(index){
+        let currentNode = this.head;
+        for(let i=0; i<index-1; i++){
+            // console.log(currentNode);
+            currentNode = currentNode.next;
+            // console.log(currentNode);
+        }
+        currentNode.next = currentNode.next.next;
+        this.length--;
+        console.log(currentNode);
+    }
+
     printList(){
         let array = [];
         let presentNode = this.head;
@@ -71,5 +83,6 @@ myLinkedList.append(65);
 myLinkedList.prepend(992);
 myLinkedList.insert(9,444);
 console.log(myLinkedList)
+myLinkedList.remove(2);
 
 myLinkedList.printList();
