@@ -23,5 +23,5 @@ reverse2=(str)=>{
 }
 
 
-reverse('abcdef');
+reverse('abc');
 reverse2('abcdef');
