@@ -1,4 +1,5 @@
-console.log("stacks");
+// Implementation of stacks using linked lists
+console.log("Implementation of stacks using linked lists");
 
 class Node {
   constructor(value) {
