@@ -49,6 +49,39 @@ class BinarySearchTree{
         console.log(this);
     }
     lookup(value){
+        console.log('looking for : ', value);
+        let currentNode = this.root;
+
+        if(!this.root){
+            console.log('Item not found : Empty tree')
+            return false;
+        }
+
+        while(true){
+            if(value===currentNode.value){
+                // Item found 
+                console.log("Found the item", currentNode)
+
+                return true;
+            }
+            else if(value < currentNode.value){
+                // Left side
+                if(!currentNode.left){
+                    console.log('Item not found in the tree');
+                    return false;
+                }
+                currentNode = currentNode.left;
+
+            }
+            else if(value > currentNode.value){
+                // Right side
+                 if(!currentNode.right){
+                    console.log('Item not found in the tree');
+                    return false;
+                }
+                currentNode = currentNode.right;
+            }
+        }
 
     }
 }
@@ -62,3 +95,4 @@ myTree.insert(30);
 myTree.insert(60);
 myTree.insert(110);
 myTree.insert(190);
+myTree.lookup(120);
